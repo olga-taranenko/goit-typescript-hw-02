@@ -1,6 +1,10 @@
 import css from "./ErrorMessage.module.css";
 
-const ErrorMessage = ({ children }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+const ErrorMessage = ({ children }: Props) => {
   return <div className={css.errorText}>{children}</div>;
 };
 

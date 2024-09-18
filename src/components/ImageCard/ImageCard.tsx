@@ -1,6 +1,11 @@
+import { Image, Urls } from "../../types";
 import css from "./ImageCard.module.css";
 
-const ImageCard = ({ alt_description, urls, color, openModal }) => {
+interface ImageProps extends Omit<Image, "id"> {
+  openModal: (url: string, alt: string) => void;
+}
+
+const ImageCard = ({ alt_description, urls, color, openModal }: ImageProps) => {
   return (
     <div
       className={css.thumb}
